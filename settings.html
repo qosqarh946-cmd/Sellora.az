@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css">
+    <title>Parametrlər</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Üst Hissə / Geri Düyməsi -->
+        <div class="settings-header">
+            <a href="./index.html" class="geri-btn">← Geri qayıt</a>
+        <br>
+        <br>
+            <h2>Tənzimləmələr</h2>
+        </div>
+
+        <!-- Parametrlər Paneli (Accordion / Details) -->
+        <div class="settings-wrapper">
+            
+            <!-- Mağaza adı -->
+            <details class="setting-card">
+                <summary>
+                    <div class="summary-title">
+                        <img src="./icon/icons8-store-64.png" alt="Store">
+                        <span>Mağaza adını dəyiş</span>
+                    </div>
+                    <span class="arrow-icon">▼</span>
+                </summary>
+                <div class="setting-content">
+                    <label for="magazadeyis">Mağaza adı</label>
+                    <input type="text" id="magazadeyis" placeholder="Mağaza adını daxil edin">
+                    <button type="button" id="magazaAdiniSaxla">Yadda saxla</button>
+<p id="magazaMesaj"></p>
+                </div>
+            </details>
+
+            <!-- Dil -->
+            <details class="setting-card">
+                <summary>
+                    <div class="summary-title">
+                        <img src="./icon/icons8-language-64.png" alt="Language">
+                        <span>Dil</span>
+                    </div>
+                    <span class="arrow-icon">▼</span>
+                </summary>
+                <div class="setting-content">
+                    <label>Tətbiq dili</label>
+                    <select>
+                        <option value="az">Azərbaycan dili</option>
+                    </select>
+                </div>
+            </details>
+
+           <!-- Valyuta -->
+            <details class="setting-card">
+                <summary>
+                    <div class="summary-title">
+                        <img src="./icon/icons8-currency-exchange-94.png" alt="Currency">
+                        <span>Valyuta</span>
+                    </div>
+                    <span class="arrow-icon">▼</span>
+                </summary>
+                <div class="setting-content">
+                    <label>Valyuta vahidi</label>
+                    <!-- BURA id="valyutaSecimi" ƏLAVƏ OLUNDU VƏ VALUE-LƏR BÖYÜK HƏRFLƏ EDİLDİ -->
+                    <select id="valyutaSecimi">
+                        <option value="AZN">AZN (₼)</option>
+                    </select>
+                </div>
+            </details>
+
+         <!-- Məlumatları sıfırla -->
+<details class="setting-card danger-card">
+
+    <summary>
+        <div class="summary-title">
+            <img src="./icon/icons8-reset-48.png" alt="Reset">
+            <span>Məlumatları sıfırla</span>
+        </div>
+
+        <span class="arrow-icon">▼</span>
+    </summary>
+
+    <div class="setting-content">
+
+        <button type="button" class="danger-btn">
+            Məlumatları sıfırla
+        </button>
+
+        <p id="sifirlamaMesaj"></p>
+
+        <!-- Xüsusi Təsdiq Modalı burada yerləşməlidir -->
+        <div id="tesdiqModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;">
+            <div class="modal-content" style="background: #1e1e2f; padding: 25px; border-radius: 12px; text-align: center; width: 320px; color: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                <p style="margin-bottom: 20px; font-size: 15px;">Bütün məlumatları silmək istədiyinizə əminsiniz?</p>
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="tesdiqHeri" style="background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Bəli, sil</button>
+                    <button id="tesdiqLegv" style="background: #374151; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Ləğv et</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</details>
+
+            <!-- Proqram haqqında -->
+            <details class="setting-card">
+                <summary>
+                    <div class="summary-title">
+                        <img src="./icon/icons8-info-64.png" alt="Info">
+                        <span>Proqram haqqında</span>
+                    </div>
+                    <span class="arrow-icon">▼</span>
+                </summary>
+                <div class="setting-content">
+                    <p class="info-text">
+                        <strong>Sellora</strong> — kiçik və orta biznes sahibləri üçün hazırlanmış sadə, sürətli və rahat stok və satış idarəetmə sistemidir. Məhsulların qeydiyyatı, stok izlənməsi və satışların analizi üçün nəzərdə tutulmuşdur.
+                    </p>
+                </div>
+            </details>
+
+        </div>
+    </div>
+<script src="/login.js"></script>
+<script src="/sifarisler.js"></script>
+<script src="/settings.js"></script>
+
+</body>
+
+</html>

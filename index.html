@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (!localStorage.getItem('magazaAdi')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+ 
+ <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css">
+    <title>Sellora</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-top">
+
+            <div class="placeholder"></div>
+
+            <div class="basliq-alani">
+
+                <span id="magazaAdiGosterici">
+                    Mağaza
+                </span>
+
+                <h1>Sellora</h1>
+
+            </div>
+
+            <div class="header-actions">
+
+                <a href="./settings.html" class="">
+
+                    <img
+                        src="./icon/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+                        alt="Settings"
+                    >
+
+                    <span>Parametrlər</span>
+
+                </a>
+
+                <div class="bildiris-konteyner">
+
+                    <span
+                        class="bildiris"
+                        id="bildiris"
+                    >
+
+                        <img
+                            src="./icon/icons8-notification-48.png"
+                            alt="Bildirişlər"
+                        >
+
+                        <span
+                            class="bildiris-sayi"
+                            id="bildirisSayi"
+                        >
+                            1
+                        </span>
+
+                    </span>
+
+                    <div
+                        class="bildiris-panel"
+                        id="bildirisPanel"
+                    >
+
+                        <h4>Bildirişlər</h4>
+
+                        <p>
+                            Xoş gəldiniz! Sellora işləməyə hazırdır.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- YUXARI PANEL -->
+
+        <div class="ust-kecid-paneli">
+
+            <a href="anbar.html">
+
+                Anbara bax
+
+                <img
+                    src="./icon/icons8-warehouse-100.png"
+                    alt=""
+                >
+
+            </a>
+
+
+            <a href="sifarisler.html">
+
+                Sifarişlər
+
+                <img
+                    src="./icon/icons8-logistics-64.png"
+                    alt="Sifarişlər"
+                >
+
+            </a>
+
+
+            <a href="hesabatlar.html">
+
+                Hesabatlar
+
+                <img
+                    src="./icon/icons8-bar-chart-48.png"
+                    alt=""
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- MƏHSUL MƏLUMATLARI -->
+
+        <h3>Məhsul məlumatları</h3>
+
+        <form id="mehsulForm">
+
+            <div class="form-group">
+
+                <label for="mehsulAdi">
+                    Məhsul adı
+                </label>
+
+                <input
+                    type="text"
+                    id="mehsulAdi"
+                    placeholder="Məhsulun adı"
+                    required
+                >
+
+            </div>
+
+<div class="form-group">
+                <label>Məhsul şəkli (JPG, JPEG, WEBP, PNG)</label>
+                
+                <!-- Şəkil yükləmə qutusu (Plus dizaynı) -->
+                <label for="mehsulSekli" class="sekil-yukle-kutu" id="sekilKutu">
+                    <input type="file" id="mehsulSekli" accept=".jpg, .jpeg, .webp, .png" style="display: none;">
+                    <span id="plusSimvol" class="plus-icon">+</span>
+                    <img id="sekilOnizleme" src="" alt="Şəkil önizləmə" style="display: none;">
+                </label>
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="mehsulKodu">
+                        Məhsul kodu
+                    </label>
+
+                    <input
+                        type="text"
+                        id="mehsulKodu"
+                        placeholder="Kod / Barkod"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="kateqoriya">
+                        Kateqoriya
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kateqoriya"
+                        placeholder="Məs: Geyim"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="stokSayi">
+                        Stok
+                    </label>
+
+                    <input
+                        type="number"
+                        id="stokSayi"
+                        min="1"
+                        placeholder="0"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                id="mehsulBtn"
+            >
+                Məhsul əlavə et
+            </button>
+
+        </form>
+
+
+        <!-- MÜŞTƏRİ -->
+
+        <div class="musteri-konteyner">
+
+            <h3>Müştəri</h3>
+
+            <form id="musteriForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="musteriAdi">
+                            Müştəri adı
+                        </label>
+
+                        <input
+                            type="text"
+                            id="musteriAdi"
+                            placeholder="Ad və soyad"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telefon">
+                            Telefon
+                        </label>
+
+                        <input
+                            type="number"
+                            id="telefon"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÜNVAN -->
+
+                <div class="form-group">
+
+                    <label for="unvan">
+                        Çatdırılma ünvanı
+                    </label>
+
+                    <input
+                        type="text"
+                        id="unvan"
+                        placeholder="Şəhər, küçə, bina..."
+                    >
+
+                </div>
+
+
+                <!-- MÜŞTƏRİ STATUSU -->
+
+                <div class="form-group">
+
+                    <label>
+                        Müştəri statusu
+                    </label>
+
+                    <div class="musteri-status-panel">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="musteriStatusu"
+                                value="Yeni Müştəri"
+                                checked
+                            >
+
+                            Yeni Müştəri
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="musteriStatusu"
+                                value="Daimi Müştəri"
+                            >
+
+                            Daimi Müştəri
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- SİFARİŞ -->
+
+        <div class="sifaris-konteyner">
+
+            <h3>Sifariş</h3>
+
+            <form
+                id="sifarisForm"
+                novalidate
+            >
+
+                <!-- QİYMƏTLƏR -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="alisQiymeti">
+                            Alış qiyməti
+                        </label>
+
+                        <input
+                            type="number"
+                            id="alisQiymeti"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="satisQiymeti">
+                            Satış qiyməti
+                        </label>
+
+                        <input
+                            type="number"
+                            id="satisQiymeti"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="catdirilmaQiymeti">
+                            Kuryer xərci
+                        </label>
+
+                        <input
+                            type="number"
+                            id="catdirilmaQiymeti"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MƏHSUL VƏ MİQDAR -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="sifarisMehsulu">
+                            Məhsul
+                        </label>
+
+                        <select
+                            id="sifarisMehsulu"
+                            required
+                        >
+
+                            <option value="">
+                                Məhsul seçin
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="sifarisMiqdari">
+                            Miqdar
+                        </label>
+
+                        <input
+                            type="number"
+                            id="sifarisMiqdari"
+                            min="1"
+                            value="1"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- TARİX -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="satisTarixi">
+                            Satış tarixi
+                        </label>
+
+                        <input
+                            type="date"
+                            id="satisTarixi"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAAT -->
+
+                <label for="saatCedveli">
+                    Satış saatı
+                </label>
+
+                <div
+                    class="saat-cedveli"
+                    id="saatCedveli"
+                ></div>
+
+
+                <!-- ÖDƏNİŞ -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="odenisNovu">
+                            Ödəniş növü
+                        </label>
+
+                        <select id="odenisNovu">
+
+                            <option value="Nağd">
+                                Nağd
+                            </option>
+
+                            <option value="Kart">
+                                Kart
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SİFARİŞ TƏSDİQ -->
+
+                <button
+                    type="submit"
+                    id="sifarisTəsdiqBtn"
+                    class="sifaris-tesdiq-btn"
+                >
+                    Sifarişi təsdiq et
+                </button>
+
+            </form>
+
+
+            <p id="mesaj"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="/bildiris.js"></script>
+    <script src="/login.js"></script>
+    <script src="/anbar.js"></script>
+    <script src="/sifarisler.js"></script>
+ 
+
+</body>
+
+</html>

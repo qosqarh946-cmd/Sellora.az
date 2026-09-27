@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mobile.css">
+    <title>Anbar</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- GERİ -->
+        <a href="./index.html" class="geri-btn">
+            ← Geri qayıt
+        </a>
+
+        <!-- BAŞLIQ -->
+        <h3>Anbardakı məhsullar</h3>
+
+
+        <!-- AXTARIŞ -->
+        <div class="axtaris-konteyner">
+            <input
+                type="text"
+                id="anbarAxtaris"
+                placeholder="Məhsul adı və ya kodu ilə axtar..."
+            >
+        </div>
+
+
+        <!-- ANBARDAKI MƏHSULLAR -->
+        <table id="anbarCedveli">
+
+            <thead>
+
+                <tr>
+                    <th>Şəkil</th>
+                    <th>Məhsul adı</th>
+                    <th>Məhsul kodu</th>
+                    <th>Kateqoriya</th>
+                    <th>Stok sayı</th>
+                    <th>Əməliyyatlar</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="anbarBody">
+
+                <!-- Məhsullar JavaScript ilə gələcək -->
+
+            </tbody>
+
+        </table>
+
+
+        <!-- STOK VƏZİYYƏTİ -->
+        <h3>Stok Vəziyyəti</h3>
+
+
+        <div class="stoklar">
+
+            <div class="stok-karti">
+
+                <p>Ümumi Stok (Ədəd)</p>
+
+                <strong id="umumiStok">0</strong>
+
+            </div>
+
+
+            <div class="stok-karti">
+
+                <p>Məhsul Çeşidi</p>
+
+                <strong id="umumiCesid">0</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="anbar.js"></script>
+
+</body>
+
+</html>

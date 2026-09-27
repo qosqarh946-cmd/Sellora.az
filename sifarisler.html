@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mobile.css">
+
+    <title>Sellora - Sifarişlər</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- GERİ DÜYMƏSİ -->
+        <a href="index.html" class="geri-btn">
+            ← Geri qayıt
+        </a>
+
+
+        <!-- BAŞLIQ -->
+        <div class="header-top">
+            <h1>Sifarişlər</h1>
+        </div>
+
+
+        <!-- SİFARİŞ STATİSTİKALARI -->
+        <div class="stoklar">
+
+            <!-- ÜMUMİ -->
+            <div class="stok-karti">
+                <p>Ümumi sifarişlər</p>
+                <strong id="umumiSay">0</strong>
+            </div>
+
+
+            <!-- ÇATDIRILAN -->
+            <div class="stok-karti">
+                <p>Çatdırılan</p>
+                <strong id="catdirilanSay">0</strong>
+            </div>
+
+
+            <!-- LƏĞV OLUNAN -->
+            <div class="stok-karti">
+                <p>Ləğv olunan</p>
+                <strong id="legvSay">0</strong>
+            </div>
+
+
+            <!-- YENİ MÜŞTƏRİLƏR -->
+            <div class="stok-karti">
+                <p>Yeni müştərilər</p>
+                <strong id="yeniMusteriSay">0</strong>
+            </div>
+
+
+            <!-- DAİMİ MÜŞTƏRİLƏR -->
+            <div class="stok-karti">
+                <p>Daimi müştərilər</p>
+                <strong id="daimiMusteriSay">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- AXTARIŞ -->
+        <div class="axtaris-konteyner">
+
+            <input
+                type="text"
+                id="sifarisAxtaris"
+                placeholder="Müştəri adı və ya telefon nömrəsi ilə axtar..."
+            >
+
+        </div>
+
+
+        <!-- SİFARİŞ SİYAHISI -->
+        <h3>Sifariş siyahısı</h3>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+    <th>Müştəri</th>
+    <th>Telefon</th>
+    <th>Məhsul</th>
+    <th>Miqdar</th>
+    <th>Müştəri statusu</th>
+    <th>Satış qiyməti</th>
+    <th>Kuryer xərci</th>
+    <th>Ödəniş</th>
+    <th>Tarix</th>
+    <th>Status</th>
+    <th>Əməliyyat</th>
+</tr>
+
+                </thead>
+
+
+                <tbody id="sifarisListi">
+
+                    <!-- SİFARİŞLƏR JAVASCRIPT İLƏ BURADA GÖSTƏRİLƏCƏK -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- SİFARİŞ DETALLARI -->
+        <div
+            id="sifarisDetali"
+            class="sifaris-detali-panel"
+            style="display: none;"
+        >
+
+            <div class="sifaris-detali-card">
+
+
+                <!-- BAĞLA -->
+                <button
+                    type="button"
+                    id="detalBagla"
+                    class="detal-bagla"
+                >
+                    ×
+                </button>
+
+
+                <!-- BAŞLIQ -->
+                <h3>Sifariş detalları</h3>
+
+
+                <!-- DETAL MƏLUMATLARI -->
+                <div id="detalMelumat">
+
+                    <!--
+                        Müştəri
+                        Telefon
+                        Ünvan
+                        Müştəri statusu
+                        Məhsul
+                        Miqdar
+                        Alış qiyməti
+                        Satış qiyməti
+                        Kuryer xərci
+                        Ümumi məbləğ
+                        Ödəniş
+                        Tarix
+                        Status
+                    -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/sifarisler.js"></script>
+
+</body>
+
+</html>
